@@ -1,0 +1,30 @@
+@import url("./reset/variables.css");
+
+.map-container {
+    width: 100Vw;
+    background-color: #eee;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.map-title {
+    font-size: 2rem;
+}
+
+.map-map {
+    width: 80%;
+    border: 2px solid var(--thirt-color);
+    border-radius: 4px;
+}
+
+.map-direc {
+    font-size: 14px;
+    color: #555;
+    width: 85%;
+}

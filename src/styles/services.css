@@ -1,0 +1,35 @@
+@import url(./reset/variables.css);
+
+.btn-service-container {
+    background-color: var(--thirt-color);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.container-btn-sub {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-service-context {
+    background-color: #fee273;
+    width: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 170px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    gap: 20px;
+}
+
+.service-icon {
+    font-size: 40px;
+}

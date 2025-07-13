@@ -1,0 +1,28 @@
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.social-links {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+}
+
+.icon {
+    color: #333;
+}
+
+.menu-icon {
+    font-size: 20px;
+}

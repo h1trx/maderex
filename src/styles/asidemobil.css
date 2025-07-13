@@ -1,0 +1,47 @@
+.aside-mobil-container {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #eeeeee;
+    transform: translateX(-100vw);
+    transition: transform .2s ease-in;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aside-mobil-container.open {
+    transform: translateX(0);
+}
+
+.aside-links-container {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 40px;
+}
+
+.aside-link-item {
+    width: 60vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 1px solid #cccccc;
+}
+
+.texto-header-aside {
+    color: #666666;
+    font-size: 12px;
+}
+
+.close-aside {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+}

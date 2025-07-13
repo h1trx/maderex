@@ -1,0 +1,42 @@
+@import url(./reset/variables.css);
+
+.about-container {
+    background-color: var(--thirt-color);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.divisor-left {
+    width: 85%;
+    margin: 0 auto;
+    background-color: #222;
+    border: 1px solid #222;
+}
+
+.about-container > h2 {
+    margin-top: 40px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.about-container > p {
+    width: 95%;
+    margin: 0 auto;
+    color: #111;
+}
+
+.about-container > p::after {
+    content: "...";
+}
+
+.text-about {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.enlace-about {
+    text-decoration: underline;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

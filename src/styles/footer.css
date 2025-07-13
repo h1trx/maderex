@@ -1,0 +1,32 @@
+footer {
+    background-color: #eeeeee;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 30px;
+    border-top: 1px solid #cccccc;
+}
+
+.img-footer {
+    width: 130px;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+.social-links-footer {
+    gap: 12px !important;
+}
+
+.list-link-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-list-footer {
+    color: #aaaaaa !important;
+}
