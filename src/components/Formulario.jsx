@@ -12,7 +12,7 @@ export const Formulario = () => {
         <section className="form-section">
             <form>
                 <h2 className="contact-h2">FORMULARIO DE<br/>CONTACTO</h2>
-                <img className="logo-form" src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1751398299/maderexwithfont_csh0um.png" alt="Logo MaderexTK" />
+                <img className="logo-form" src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1751398299/maderexwithfont_csh0um.png" alt="Logo de Maderex con el texto 'Maderex'" />
                 <div className="form-content">
                     <label htmlFor="name">Nombres</label>
                     <input className="input-form" type="text" name="name" id="name" placeholder="Juan Camilo" value={name} onChange={(e) => { setName(e.target.value) }} />
@@ -34,16 +34,17 @@ export const Formulario = () => {
                     sendMail(name, asunto, mail, msg, setName, setAsunto, setMail, setMsg)
                     setSend(true)
                     setTimeout(() => {
-                        //setSend(false)
-                        console.log("ok")
+                        setSend(false)
                     }, 3000)
                 }}>Enviar</button>
+                {send && <p className="confirmation-message">¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.</p>}
             </form>
             <div className="video">
-                <video src="https://res.cloudinary.com/dvdhtdzwp/video/upload/v1746241298/e4zulgqf7nctyev2zhjd.mp4"
+                <video src="https://res.cloudinary.com/dxr7cjjpa/video/upload/v1752937174/0719_1_tzsx2z.mp4"
                     autoPlay
                     muted
                     loop
+                    title="Video de fondo de un bosque"
                 >hola</video>
             </div>
         </section>

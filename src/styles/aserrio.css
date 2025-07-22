@@ -1,0 +1,83 @@
+@import url(./typography.css);
+@import url(./reset/variables.css);
+
+.aserrio-main {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.hero-aserrio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198836/IMG_20201211_141337_aj0aui.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    color: white;
+    border-radius: var(--radio);
+}
+
+.hero-text h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: var(--font-size-lg);
+}
+
+.process-section, .services-section {
+    padding: 2rem 0;
+}
+
+.process-section h2, .services-section h2 {
+    font-size: var(--font-size-xl);
+    color: var(--second-color);
+    margin-bottom: 1.5rem;
+}
+
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.step {
+    flex: 1 1 200px;
+}
+
+.step-icon {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.step h3 {
+    font-size: var(--font-size-md);
+    margin-top: 0.5rem;
+    color: var(--charcoal);
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: var(--font-size-base);
+}

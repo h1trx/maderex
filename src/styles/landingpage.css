@@ -52,6 +52,7 @@
 .title {
     text-align: center;
     color: #eee;
+    font-size: var(--font-size-xxl);
 }
 
 .title > spam {
@@ -62,16 +63,18 @@
     color: #ccc;
     text-align: center;
     max-width: 340px;
+    font-size: var(--font-size-base);
 }
 
 .btn-action {
     width: 220px;
     background-color: var(--thirt-color);
-    color: #111;
+    color: #ffffff;
     text-align: center;
     border-radius: 30px;
     padding: 10px 0;
     font-weight: 700;
+    font-size: var(--font-size-md);
 }
 
 .downrow {
@@ -97,9 +100,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .ia-chat-inside {
     color: #eeeeee;
-    font-size: 22px;
+    font-size: var(--font-size-lg);
+}
+
+@media screen and (min-width: 1024px) {
+    .desc { 
+        max-width: 500px;
+    }
+
+    .btn-action {
+        width: auto;
+        padding: 10px 20px;
+    }
 }

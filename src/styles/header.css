@@ -11,6 +11,7 @@
     justify-content: space-between;
     padding: 0 10px;
     border-bottom: 1px solid #aaa;
+    z-index: 1;
 }
 
 .social-links {
@@ -21,8 +22,26 @@
 
 .icon {
     color: #333;
+    font-size: var(--font-size-md);
 }
 
 .menu-icon {
-    font-size: 20px;
+    font-size: var(--font-size-lg);
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    /* Ocultamos menú hamburguesa en escritorio */
+    .menu-icon {
+        display: none;
+    }
+
+    .header-nav {
+        height: 70px;
+        padding: 0 40px;
+    }
+
+    .social-links {
+        gap: 16px;
+    }
 }

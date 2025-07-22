@@ -10,6 +10,7 @@
 
 .project-main-container > h2 {
     text-align: center;
+    font-size: var(--font-size-xl);
 }
 
 .project-article {
@@ -19,7 +20,7 @@
 
 .descripcion-project {
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     margin-top: 5px;
 }
 
@@ -33,10 +34,11 @@
 .boton-accion-project {
     border: 1px solid var(--thirt-color);
     background-color: var(--thirt-color);
-    padding: 0 5px;
-    font-size: 13px;
+    padding: 0 10px;
+    font-size: var(--font-size-sm);
     font-weight: 700;
     border-radius: 4px;
+    color: #eeeeee;
 }
 
 .img-project {
@@ -50,4 +52,18 @@
 .project-div {
     width: 80%;
     height: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+    .project-article {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 40px;
+    }
+    .project-article > section {
+        width: 70%;
+    }
+    .img-project {
+        height: 400px;
+    }
 }

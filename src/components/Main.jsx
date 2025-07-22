@@ -27,7 +27,7 @@ export const Main = () => {
                 <p className="desc">Somos una empresa dedicada a la exportación y transformación de madera teca y roble. Nuestros productos provienen de bosques reforestados,  garantizando la sostenibilidad con el medio ambiente</p>
             </div>
             <button className="btn-action" onClick={() => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)}>Cotiza tu exportación</button>
-            <a href="#hola">
+            <a aria-label="Ir a servicios" href="#hola">
                 <FaArrowDown className="downrow" />
             </a>
             <button aria-label="Abrir chat de Inteligencia Artificial" className="btn-ia-chat" onClick={() => { setChat(!chat) }}>

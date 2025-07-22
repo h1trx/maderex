@@ -7,25 +7,23 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
-import { navig } from "../utils/navig";
+import "../../styles/header.css"
 
-import "../styles/header.css"
+import { Asidemovil } from "./../Asidemovil";
 
-import { Asidemovil } from "./Asidemovil";
-
-export const Header = () => {
+export const Headerabout = () => {
   const [aside, setAside] = useState(false)
   return (
     <header className="header-nav">
-<button className="icon menu-icon" onClick={() => { setAside(!aside) }} aria-label="Abrir menú" aria-expanded={aside}>
+      <button className="icon menu-icon" onClick={() => { setAside(!aside) }} aria-label="Abrir menú" aria-expanded={aside}>
         <IoMenu />
       </button>
       <nav>
         <ul className="aside-links-container envidia">
-          <li className="aside-link-item"><a href="#">Home</a></li>
-          <li className="aside-link-item"><a href="#">Servicios</a></li>
-          <li className="aside-link-item"><a href="#">Conocenos</a></li>
-          <li className="aside-link-item"><a href="#">Contactanos</a></li>
+          <li className="aside-link-item"><a>Home</a></li>
+          <li className="aside-link-item"><a>Servicios</a></li>
+          <li className="aside-link-item"><a>Conocenos</a></li>
+          <li className="aside-link-item"><a>Contactanos</a></li>
         </ul>
       </nav>
       <ul className="social-links">
