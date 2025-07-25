@@ -14,15 +14,67 @@
     z-index: 1;
 }
 
+/* Animación de subrayado en los botones del header (excepto redes sociales) */
+.aside-links-container .aside-link-item a {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    font-weight: 700;
+    transition: color 0.2s;
+    padding: 4px 0;
+}
+
+.aside-links-container .aside-link-item a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.aside-links-container .aside-link-item a:hover::after {
+    width: 100%;
+}
+
 .social-links {
     display: flex;
     flex-flow: row nowrap;
     gap: 8px;
 }
 
+/* Hover de color para cada red social */
+.social-links a[aria-label="Facebook"] .icon,
+.social-links a[aria-label="Instagram"] .icon,
+.social-links a[aria-label="Tiktok"] .icon,
+.social-links a[aria-label="Twitter"] .icon {
+    transition: color 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.social-links a[aria-label="Facebook"]:hover .icon {
+    color: #1877f3;
+}
+.social-links a[aria-label="Instagram"]:hover .icon {
+    color: #e4405f;
+}
+.social-links a[aria-label="Tiktok"]:hover .icon {
+    color: #000;
+}
+.social-links a[aria-label="Twitter"]:hover .icon {
+    color: #000;
+}
+
 .icon {
     color: #333;
     font-size: var(--font-size-md);
+}
+
+/* No aplicar animación a iconos de redes sociales */
+.social-links .icon {
+    position: static;
 }
 
 .menu-icon {

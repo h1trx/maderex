@@ -15,17 +15,31 @@ import { Asidemovil } from "./Asidemovil";
 
 export const Header = () => {
   const [aside, setAside] = useState(false)
+  // Función para scroll suave
+  const scrollToSection = (id) => {
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // cambios hechos: 
+  // - Navegación directa a la sección sin usar useNavigate
+  // - Simplificación de la función scrollToSection
+  // - Eliminación de lógica de navegación que no se usa en este contexto
   return (
     <header className="header-nav">
-<button className="icon menu-icon" onClick={() => { setAside(!aside) }} aria-label="Abrir menú" aria-expanded={aside}>
+      <button className="icon menu-icon" onClick={() => { setAside(!aside) }} aria-label="Abrir menú" aria-expanded={aside}>
         <IoMenu />
       </button>
       <nav>
         <ul className="aside-links-container envidia">
-          <li className="aside-link-item"><a href="#">Home</a></li>
-          <li className="aside-link-item"><a href="#">Servicios</a></li>
-          <li className="aside-link-item"><a href="#">Conocenos</a></li>
-          <li className="aside-link-item"><a href="#">Contactanos</a></li>
+          <li className="aside-link-item"><a onClick={() => scrollToSection("home")}>Home</a></li>
+          <li className="aside-link-item"><a onClick={() => scrollToSection("exports-section")}>Servicios</a></li>
+          <li className="aside-link-item"><a onClick={() => scrollToSection("about-section")}>Conocenos</a></li>
+          <li className="aside-link-item"><a onClick={() => scrollToSection("contact-section")}>Contactanos</a></li>
         </ul>
       </nav>
       <ul className="social-links">

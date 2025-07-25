@@ -1,13 +1,17 @@
 @import url(./reset/variables.css);
 
+/* Ajuste para que el logo no quede tapado por el header fijo */
 .landing-container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     gap: 30px;
+    padding-top: 70px;
+    box-sizing: border-box;
 }
+
 
 .back-container {
     position: fixed;
@@ -75,6 +79,7 @@
     padding: 10px 0;
     font-weight: 700;
     font-size: var(--font-size-md);
+    cursor: pointer;
 }
 
 .downrow {
@@ -116,5 +121,8 @@
     .btn-action {
         width: auto;
         padding: 10px 20px;
+    }
+    .landing-container {
+        padding-top: 80px;
     }
 }
