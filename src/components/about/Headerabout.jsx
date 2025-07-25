@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { IoMenu } from "react-icons/io5";
 
@@ -13,6 +14,24 @@ import { Asidemovil } from "./../Asidemovil";
 
 export const Headerabout = () => {
   const [aside, setAside] = useState(false)
+  const navigate = useNavigate();
+
+  // Navega y hace scroll suave si corresponde
+  const goToSection = (section) => {
+    if (section === "home") {
+      navigate("/");
+      // Scroll al top después de navegar
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(section);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  // logica para manejar el scroll suave y navegación
   return (
     <header className="header-nav">
       <button className="icon menu-icon" onClick={() => { setAside(!aside) }} aria-label="Abrir menú" aria-expanded={aside}>
@@ -20,10 +39,10 @@ export const Headerabout = () => {
       </button>
       <nav>
         <ul className="aside-links-container envidia">
-          <li className="aside-link-item"><a>Home</a></li>
-          <li className="aside-link-item"><a>Servicios</a></li>
-          <li className="aside-link-item"><a>Conocenos</a></li>
-          <li className="aside-link-item"><a>Contactanos</a></li>
+          <li className="aside-link-item"><a onClick={() => goToSection("home")}>Home</a></li>
+          <li className="aside-link-item"><a onClick={() => goToSection("exports-section")}>Servicios</a></li>
+          <li className="aside-link-item"><a onClick={() => goToSection("about-section")}>Conocenos</a></li>
+          <li className="aside-link-item"><a onClick={() => goToSection("contact-section")}>Contactanos</a></li>
         </ul>
       </nav>
       <ul className="social-links">
@@ -33,6 +52,6 @@ export const Headerabout = () => {
         <li><a href="https://x.com/MaderexI57271" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><BsTwitterX className="icon social-icon" /></a></li>
       </ul>
       <Asidemovil isVisible={aside} setIsVisible={setAside} />
-    </ header>
+    </header>
   )
 }

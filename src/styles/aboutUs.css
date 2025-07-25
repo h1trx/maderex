@@ -1,0 +1,385 @@
+.aboutus-title {
+  margin-top: 0;
+}
+/* Logo en la sección principal de Aboutus igual que en Main.jsx */
+.logopng {
+  max-width: 170px;
+  max-height: 170px;
+  border-radius: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18); /* Sombra más notoria */
+  margin: 0 auto 20px auto;
+  display: block;
+  border: 6px solid #fff;
+  background: linear-gradient(135deg, #8B0000 60%, #DC143C 100%);
+  padding: 12px;
+  /* Sombra leve para el logo principal */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-us {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: rgba(139, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-name h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.company-name p {
+  color: #f0f0f0;
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.highlight {
+  color: #FF6B35;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 0;
+}
+
+/* What is Section */
+.what-is-section {
+  position: relative; /* Añadido para el overlay */
+  padding: 100px 0;
+  background:
+    url('https://maderextk.com/main/images/background/about_header_1920_746.png') center/cover no-repeat;
+}
+
+/* Overlay oscuro para la imagen de fondo */
+.what-is-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.566); /* Ajusta el valor para más/menos oscuridad */
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté sobre el overlay */
+.what-is-section > .container {
+  position: relative;
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra leve */
+}
+
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #8B0000, #DC143C);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.content-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: white;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.12); /* Sombra leve */
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.highlight-item {
+  text-align: center;
+}
+
+.highlight-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra leve */
+}
+
+.highlight-text {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.12); /* Sombra leve */
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mission-text h2 {
+  font-size: 2.5rem;
+  color: #8B0000;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.mission-text h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8B0000, #DC143C);
+  margin-top: 15px;
+  border-radius: 2px;
+}
+
+.mission-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.mission-image img,
+.vision-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 4px solid #DC143C;
+  box-shadow: 0 16px 56px rgba(139,0,0,0.22), 0 2px 24px rgba(0,0,0,0.10);
+  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease, border-color 0.8s ease;
+  background: linear-gradient(135deg, #fff6, #DC143C22);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.vision-text h2 {
+  font-size: 2.5rem;
+  color: #8B0000;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.vision-text h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8B0000, #DC143C);
+  margin-top: 15px;
+  border-radius: 2px;
+}
+
+.vision-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.vision-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18); /* Sombra más notoria */
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 100px 0;
+  background: white;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 2.5rem;
+  color: #8B0000;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.partners-section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #8B0000, #DC143C);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+
+.partner-logo {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.partner-logo:hover {
+  transform: translateY(-10px);
+}
+
+.partner-logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.15); /* Sombra más notoria */
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #8B0000, #DC143C);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+  .mission-content,
+  .vision-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mission-image img,
+  .vision-image img {
+    height: 220spx;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 8px;
+  }
+  .section-header h2,
+  .mission-text h2,
+  .vision-text h2,
+  .partners-section h2 {
+    font-size: 1.5rem;
+  }
+  .content-text p,
+  .mission-text p,
+  .vision-text p {
+    font-size: 1rem;
+  }
+  .mission-image img,
+  .vision-image img {
+    height: 200px;
+    border-radius: 10px;
+  }
+  .highlights {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .partners-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .mission-section,
+  .vision-section {
+    padding: 40px 0;
+  }
+  .mission-section {
+    margin-bottom: 0;
+  }
+  .vision-section {
+    margin-top: -20px;
+  }
+}

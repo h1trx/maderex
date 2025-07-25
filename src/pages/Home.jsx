@@ -7,17 +7,24 @@ import { Map } from "../components/Map.jsx"
 import { Projects } from "../components/Projects.jsx"
 import { Services } from "../components/Services.jsx"
 
+// se agregaron ids a las secciones para el scroll suave
 export const Home = () => {
     return (
         <>
             <Header />
             <main>
                 <Main />
-                <Services />
-                <About />
+                <section id="exports-section">
+                  <Services />
+                </section>
+                <section id="about-section">
+                  <About />
+                </section>
                 <Projects />
-                <Formulario />
-                <Map />
+                <section id="contact-section">
+                  <Formulario />
+                </section>
+                <Map/>
             </main>
             <Footer />
         </>
