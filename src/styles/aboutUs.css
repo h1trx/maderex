@@ -75,6 +75,21 @@
   margin-top: 0;
 }
 
+/* Efecto de hover para imágenes: doblar con rotación 3D */
+.main-content img,
+.mission-image img,
+.vision-image img,
+.partner-logo img {
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+  will-change: transform;
+}
+.main-content img:hover,
+.mission-image img:hover,
+.vision-image img:hover,
+.partner-logo img:hover {
+  transform: perspective(600px) rotateY(-12deg) scale(1.04);
+}
+
 /* What is Section */
 .what-is-section {
   position: relative; /* Añadido para el overlay */

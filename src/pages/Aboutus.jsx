@@ -6,7 +6,7 @@ import "../styles/aboutUs.css"
 
 // animacion para valores destacados
 const HIGHLIGHT_VALUES = [
-  { value: 25, suffix: "+", label: "Años de experiencia" },
+  { value: 29, suffix: "+", label: "Años de experiencia" },
   { value: 100, suffix: "%", label: "Aprovechamiento sostenible" }
 ];
 
