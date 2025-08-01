@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    height: 75vh;
 }
 
 .sombra {
@@ -72,6 +73,6 @@
         border: none;
     }
     .sombra {
-        height: 500px;
+        height: 100%;
     }
 }
