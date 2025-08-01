@@ -40,7 +40,7 @@ export const Headerabout = () => {
       <nav>
         <ul className="aside-links-container envidia">
           <li className="aside-link-item"><a onClick={() => goToSection("home")}>Home</a></li>
-          <li className="aside-link-item"><a onClick={() => goToSection("exports-section")}>Servicios</a></li>
+          {/* <li className="aside-link-item"><a onClick={() => goToSection("exports-section")}>Servicios</a></li> */}
           <li className="aside-link-item"><a onClick={() => goToSection("about-section")}>Conocenos</a></li>
           <li className="aside-link-item"><a onClick={() => goToSection("contact-section")}>Contactanos</a></li>
         </ul>

@@ -36,7 +36,7 @@ export const Header = () => {
       <nav>
         <ul className="aside-links-container envidia">
           <li className="aside-link-item"><a onClick={() => scrollToSection("home")}>Home</a></li>
-          <li className="aside-link-item"><a onClick={() => scrollToSection("exports-section")}>Servicios</a></li>
+          {/* <li className="aside-link-item"><a onClick={() => scrollToSection("exports-section")}>Servicios</a></li> */}
           <li className="aside-link-item"><a onClick={() => scrollToSection("about-section")}>Conocenos</a></li>
           <li className="aside-link-item"><a onClick={() => scrollToSection("contact-section")}>Contactanos</a></li>
         </ul>
