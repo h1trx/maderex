@@ -14,9 +14,11 @@ export const Home = () => {
             <Header />
             <main>
                 <Main />
-                <section id="exports-section">
+                {
+                    /* <section id="exports-section">
                   <Services />
-                </section>
+                </section> */
+                }
                 <section id="about-section">
                   <About />
                 </section>

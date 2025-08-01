@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    gap: 30px;
-    padding-top: 70px;
+    gap: 0;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
     box-sizing: border-box;
 }
 
@@ -41,10 +42,13 @@
 }
 
 .logopng {
-    max-width: 170px;
-    max-height: 170px;
+    max-width: 260px;
+    max-height: 260px;
     border-radius: 100%;
     box-shadow: 0 0 100vw #fff8;
+    image-rendering: auto;
+    width: 100%;
+    height: auto;
 }
 
 .text-container {
@@ -53,14 +57,44 @@
     gap: 10px;
 }
 
+.title-containter {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 0px;
+}
+
 .title {
     text-align: center;
     color: #eee;
-    font-size: var(--font-size-xxl);
+    /* font-size: var(--font-size-xxl); */
+    font-size: 3rem;
+    margin-bottom: 0.2em; /* Más juntos */
+    line-height: 1;
 }
 
 .title > spam {
     color: var(--thirt-color);
+    transition: color 0.3s, text-shadow 0.3s, transform 0.2s;
+    cursor: pointer;
+    transform: none;
+    text-shadow: none; /* Valor inicial */
+}
+
+.title > spam:hover {
+    color: #fff;
+    text-shadow: 0 0 12px var(--thirt-color), 0 0 32px #fff8;
+    transform: scale(1.18) rotate(-4deg);
+}
+
+#internacional {
+    text-align: center;
+    color: #eee;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: -0.3em;
 }
 
 .desc {
@@ -80,6 +114,27 @@
     font-weight: 700;
     font-size: var(--font-size-md);
     cursor: pointer;
+    margin-top: 2.5rem;
+    transition: all 0.2s;
+}
+
+.btn-services {
+    /* width: 260px; */
+    background-color: var(--thirt-color);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 7px 10px;
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    margin-top: 1.0rem;
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 24px 0 #1c1c1b66, 0 4px 24px 0 #0003;
 }
 
 .downrow {

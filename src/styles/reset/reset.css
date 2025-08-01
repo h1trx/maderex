@@ -80,6 +80,7 @@ img {
 }
 
 /* Remove animations for people who prefer reduced motion */
+/* 
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -88,3 +89,4 @@ img {
     scroll-behavior: auto !important;
   }
 }
+*/

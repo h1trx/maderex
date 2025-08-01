@@ -1,0 +1,128 @@
+@import url(./reset/variables.css);
+/* Carousel styles for landing section */
+.carousel-container {
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100vw;
+  transition: transform 0.6s cubic-bezier(0.77,0,0.175,1);
+}
+
+.carousel-slide {
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-service-content {
+  background: rgba(0,0,0,0.45);
+  border-radius: 18px;
+  padding: 32px 24px;
+  width: 100%;
+  height: 100%;
+  /* max-width: 100px; */
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 24px #0005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-service-title {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.carousel-service-desc {
+  font-size: 1.2rem;
+  color: #eee;
+  max-width: 340px;
+}
+
+.carousel-btn {
+    width: 220px;
+    background-color: var(--thirt-color);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    margin-top: 2.5rem;
+    transition: all 0.2s;
+}
+.carousel-btn:hover { background: #fff; transform: translateY(-50%) scale(1.12); }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  margin: 0 auto;
+  z-index: 3;
+}
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #fff6;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.carousel-dot.active {
+  background: var(--thirt-color);
+  transform: scale(1.2);
+}
+
+.carousel-service-btn {
+    width: 250px;
+    background-color: var(--thirt-color);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    margin-top: 2.5rem;
+    transition: all 0.2s;
+}
+
+.carousel-service-btn:hover {
+  background: #218838;
+}
+
+@media (max-width: 600px) {
+  .carousel-container, .carousel-slide {
+    min-height: 100vh;
+  }
+  .carousel-service-content {
+    padding: 18px 4vw;
+    max-width: 100vw;
+  }
+}

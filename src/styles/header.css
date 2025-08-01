@@ -51,20 +51,24 @@
 .social-links a[aria-label="Facebook"] .icon,
 .social-links a[aria-label="Instagram"] .icon,
 .social-links a[aria-label="Tiktok"] .icon,
-.social-links a[aria-label="Twitter"] .icon {
-    transition: color 0.5s cubic-bezier(0.4,0,0.2,1);
+.social-links a[aria-label="WhatsApp"] .icon {
+    transition: color 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 .social-links a[aria-label="Facebook"]:hover .icon {
     color: #1877f3;
+    transform: scale(1.35);
 }
 .social-links a[aria-label="Instagram"]:hover .icon {
     color: #e4405f;
+    transform: scale(1.35);
 }
 .social-links a[aria-label="Tiktok"]:hover .icon {
     color: #000;
+    transform: scale(1.35);
 }
-.social-links a[aria-label="Twitter"]:hover .icon {
-    color: #000;
+.social-links a[aria-label="WhatsApp"]:hover .icon {
+    color: #3bdf0e;
+    transform: scale(1.35);
 }
 
 .icon {
