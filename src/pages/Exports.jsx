@@ -22,6 +22,7 @@ export const Exports = () => {
               industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las
               maderas más apreciadas en el mercado.
             </p>
+          <button className="btn-action" onClick={() => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)}>Cotiza tu exportación</button>
           </div>
         </div>
       </section>

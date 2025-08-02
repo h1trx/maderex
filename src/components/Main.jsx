@@ -7,6 +7,7 @@ import { navig } from "../utils/navig";
 
 import "../styles/landingpage.css"
 import "../styles/carousel.css"
+import { useNavigate } from "react-router-dom";
 
 export const Main = () => {
   const dotsRef = useRef(null);
@@ -15,6 +16,7 @@ export const Main = () => {
   // Swipe/drag state
   const [dragStartX, setDragStartX] = useState(null);
   const [dragging, setDragging] = useState(false);
+  const navigate = useNavigate()
 
   // Handlers para swipe/touch/drag
   const handleTouchStart = (e) => {
@@ -103,8 +105,8 @@ export const Main = () => {
       desc: 'En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.',
       bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
       button: {
-        text: 'Cotiza tu exportación',
-        onClick: () => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)
+        text: 'Mas información',
+        onClick: () => navigate('/exports')
       }
     },
     {

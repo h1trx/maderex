@@ -16,6 +16,7 @@
   text-align: center;
   color: white;
   position: relative;
+  padding: 100px 0px;
 }
 
 .hero-overlay {
@@ -94,6 +95,45 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .image-content {
+    padding: 0;
+  }
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .grid-image {
+    height: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 8px;
+  }
+  .section-content {
+    gap: 18px;
+  }
+  .grid-image {
+    height: 120px;
+  }
+  .hero-section {
+    padding: 60px 0px;
+    min-height: 50vh;
+  }
+  .hero-title {
+    font-size: var(--font-size-xl);
+  }
+  .hero-description {
+    font-size: var(--font-size-sm);
+  }
 }
 
 .section-content.reverse {
