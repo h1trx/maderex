@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { BsChatDots } from "react-icons/bs";
 import { Acedro } from "./Acedro";
@@ -9,6 +9,7 @@ import "../styles/landingpage.css"
 import "../styles/carousel.css"
 
 export const Main = () => {
+  const dotsRef = useRef(null);
   const [chat, setChat] = useState(false);
   const [slide, setSlide] = useState(0);
   // Swipe/drag state
@@ -131,6 +132,21 @@ export const Main = () => {
   const nextSlide = () => setSlide((s) => (s + 1) % slides.length);
   const prevSlide = () => setSlide((s) => (s - 1 + slides.length) % slides.length);
 
+  // Ocultar dots al hacer scroll si el navbar está visible
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!dotsRef.current) return;
+      // Ajusta el valor 60 según la altura de tu navbar
+      if (window.scrollY > 60) {
+        dotsRef.current.classList.add('hide-on-scroll');
+      } else {
+        dotsRef.current.classList.remove('hide-on-scroll');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="landing-container">
       <div className="carousel-container">
@@ -168,7 +184,7 @@ export const Main = () => {
             </div>
           ))}
         </div>
-        <div className="carousel-dots">
+        <div className="carousel-dots" ref={dotsRef}>
           {slides.map((_, idx) => (
             <button key={idx} className={`carousel-dot${slide === idx ? ' active' : ''}`} onClick={() => setSlide(idx)} aria-label={`Ir al slide ${idx + 1}`}></button>
           ))}

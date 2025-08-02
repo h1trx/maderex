@@ -6,6 +6,7 @@ import { Main } from "../components/Main.jsx"
 import { Map } from "../components/Map.jsx"
 import { Projects } from "../components/Projects.jsx"
 import { Services } from "../components/Services.jsx"
+import '../styles/about.css'
 
 // se agregaron ids a las secciones para el scroll suave
 export const Home = () => {

@@ -1,4 +1,9 @@
 @import url(./typography.css);
+@import url(./reset/variables.css);
+
+#about-section {
+    background-color: #eee;
+}
 
 .about-container {
     background-image: url("https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198836/IMG_20201211_141337_aj0aui.jpg");
@@ -6,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 .sombra {
@@ -21,6 +26,14 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.title-about {
+    text-align: center;
+    padding: 15px 0;
+    color: #111;
+    margin-bottom: 5px;
+    font-size: var(--font-size-xl);
 }
 
 .divisor-left {

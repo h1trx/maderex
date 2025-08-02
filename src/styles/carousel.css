@@ -84,6 +84,12 @@
   bottom: 18px;
   margin: 0 auto;
   z-index: 3;
+  transition: opacity 0.3s;
+}
+
+.carousel-dots.hide-on-scroll {
+  opacity: 0;
+  pointer-events: none;
 }
 .carousel-dot {
   width: 12px;
