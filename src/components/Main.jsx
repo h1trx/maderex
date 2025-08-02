@@ -116,7 +116,7 @@ export const Main = () => {
       bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
       button: {
         text: 'Solicita servicio de aserrío',
-        onClick: () => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20información%20sobre%20servicio%20de%20aserrío`)
+        onClick: () => navigate('/acerrio')
       }
     },
     {
