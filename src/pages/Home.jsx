@@ -23,7 +23,9 @@ export const Home = () => {
                 <section id="about-section">
                   <About />
                 </section>
-                <Projects />
+                <section id="projects-section">
+                  <Projects />
+                </section>
                 <section id="contact-section">
                   <Formulario />
                 </section>

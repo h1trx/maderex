@@ -38,6 +38,7 @@ export const Header = () => {
           <li className="aside-link-item"><a onClick={() => scrollToSection("home")}>Home</a></li>
           {/* <li className="aside-link-item"><a onClick={() => scrollToSection("exports-section")}>Servicios</a></li> */}
           <li className="aside-link-item"><a onClick={() => scrollToSection("about-section")}>Conocenos</a></li>
+          <li className="aside-link-item"><a onClick={() => scrollToSection("projects-section")}>Proyectos</a></li>
           <li className="aside-link-item"><a onClick={() => scrollToSection("contact-section")}>Contactanos</a></li>
         </ul>
       </nav>

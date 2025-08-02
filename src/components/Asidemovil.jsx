@@ -29,8 +29,8 @@ export const Asidemovil = ({ isVisible, setIsVisible }) => {
     <section className={`aside-mobil-container ${isVisible? "open" : ""}`}>
       <ul className="aside-links-container">
         <li className="aside-link-item"><a onClick={() => scrollToSection("home")}>Home</a></li>
-        <li className="aside-link-item"><a onClick={() => scrollToSection("exports-section")}>Servicios</a></li>
         <li className="aside-link-item"><a onClick={() => scrollToSection("about-section")}>Conocenos</a></li>
+        <li className="aside-link-item"><a onClick={() => scrollToSection("projects-section")}>Proyectos</a></li>
         <li className="aside-link-item"><a onClick={() => scrollToSection("contact-section")}>Contactanos</a></li>
       </ul>
       <p className="texto-header-aside">Made with 🧡 for Maderex TK Team</p>

@@ -42,6 +42,7 @@ export const Headerabout = () => {
           <li className="aside-link-item"><a onClick={() => goToSection("home")}>Home</a></li>
           {/* <li className="aside-link-item"><a onClick={() => goToSection("exports-section")}>Servicios</a></li> */}
           <li className="aside-link-item"><a onClick={() => goToSection("about-section")}>Conocenos</a></li>
+          <li className="aside-link-item"><a onClick={() => goToSection("projects-section")}>Proyectos</a></li>
           <li className="aside-link-item"><a onClick={() => goToSection("contact-section")}>Contactanos</a></li>
         </ul>
       </nav>
