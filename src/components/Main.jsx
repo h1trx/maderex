@@ -172,25 +172,39 @@ export const Main = () => {
                     <div className="carousel-service-bg"></div>
                     <h2 className="carousel-service-title">{slideObj.title}</h2>
                     <p className="carousel-service-desc">{slideObj.desc}</p>
-                    {slideObj.button && (
-                      <button
-                        className="carousel-service-btn"
-                        onClick={slideObj.button.onClick}
-                      >
-                        {slideObj.button.text}
-                      </button>
-                    )}
                   </div>
+                  {slideObj.button && (
+                    <button
+                      className="btn-services"
+                      onClick={slideObj.button.onClick}
+                    >
+                      {slideObj.button.text}
+                    </button>
+                  )}
                 </div>
               )}
             </div>
           ))}
         </div>
-        <div className="carousel-dots" ref={dotsRef}>
-          {slides.map((_, idx) => (
-            <button key={idx} className={`carousel-dot${slide === idx ? ' active' : ''}`} onClick={() => setSlide(idx)} aria-label={`Ir al slide ${idx + 1}`}></button>
+        <nav className="carousel-nav" ref={dotsRef} aria-label="Navegación de servicios">
+          {slides.map((slideObj, idx) => (
+            slideObj.type === 'service' ? (
+              <>
+                <button
+                  key={slideObj.title}
+                  className={`carousel-nav-btn${slide === idx ? ' active' : ''}`}
+                  onClick={() => setSlide(idx)}
+                  aria-label={`Ir a ${slideObj.title}`}
+                >
+                  {slideObj.title}
+                </button>
+                {idx < slides.length - 1 && slides[idx + 1]?.type === 'service' ? (
+                  <span className="carousel-nav-sep" aria-hidden="true">|</span>
+                ) : null}
+              </>
+            ) : null
           ))}
-        </div>
+        </nav>
       </div>
       <a aria-label="Ir a servicios" href="#hola">
         <FaArrowDown className="downrow" />
