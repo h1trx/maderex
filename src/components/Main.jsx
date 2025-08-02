@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaHome } from "react-icons/fa";
+import { GiWoodCabin, GiWoodBeam, GiHandTruck } from "react-icons/gi";
+import { PiShippingContainerLight } from "react-icons/pi";
 import { BsChatDots } from "react-icons/bs";
 import { Acedro } from "./Acedro";
 
@@ -85,7 +87,7 @@ export const Main = () => {
             <p className="desc">Somos una empresa dedicada a la exportación y transformación de madera teca y roble. Nuestros productos provienen de bosques reforestados,  garantizando la sostenibilidad con el medio ambiente</p>
           </div>
           {/* <button className="btn-action" onClick={() => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)}>Cotiza tu exportación</button> */}
-          <button className="btn-services" onClick={() => setSlide((s) => (s + 1) % slides.length)}>conoce nuestros servicios</button>
+          {/* <button className="btn-services" onClick={() => setSlide((s) => (s + 1) % slides.length)}>conoce nuestros servicios</button> */}
         </>
       )
     },
@@ -187,8 +189,23 @@ export const Main = () => {
           ))}
         </div>
         <nav className="carousel-nav" ref={dotsRef} aria-label="Navegación de servicios">
-          {slides.map((slideObj, idx) => (
-            slideObj.type === 'service' ? (
+          <button
+            className={`carousel-nav-btn${slide === 0 ? ' active' : ''}`}
+            onClick={() => setSlide(0)}
+            aria-label="Ir al inicio"
+            style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
+          >
+            <FaHome className="carousel-nav-icon" />
+          </button>
+          <span className="carousel-nav-sep" aria-hidden="true">|</span>
+          {slides.map((slideObj, idx) => {
+            if (slideObj.type !== 'service') return null;
+            let icon = null;
+            if (slideObj.title === 'Maderex Exports') icon = <PiShippingContainerLight className="carousel-nav-icon" />;
+            else if (slideObj.title === 'Store') icon = <GiHandTruck className="carousel-nav-icon" />;
+            else if (slideObj.title === 'Aserrío' || slideObj.title === 'Acerrio') icon = <GiWoodBeam className="carousel-nav-icon" />;
+            else if (slideObj.title === 'Buenvivir') icon = <GiWoodCabin className="carousel-nav-icon" />;
+            return (
               <>
                 <button
                   key={slideObj.title}
@@ -196,14 +213,15 @@ export const Main = () => {
                   onClick={() => setSlide(idx)}
                   aria-label={`Ir a ${slideObj.title}`}
                 >
-                  {slideObj.title}
+                  <span className="carousel-nav-btn-text">{slideObj.title}</span>
+                  <span className="carousel-nav-btn-icon">{icon}</span>
                 </button>
                 {idx < slides.length - 1 && slides[idx + 1]?.type === 'service' ? (
                   <span className="carousel-nav-sep" aria-hidden="true">|</span>
                 ) : null}
               </>
-            ) : null
-          ))}
+            );
+          })}
         </nav>
       </div>
       <a aria-label="Ir a servicios" href="#hola">
