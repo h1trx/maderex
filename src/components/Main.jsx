@@ -111,7 +111,7 @@ export const Main = () => {
     },
     {
       type: 'service',
-      title: 'Acerrio',
+      title: 'Aserrío',
       desc: 'n MaderexTK International, nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños',
       bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
       button: {
