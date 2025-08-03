@@ -7,7 +7,7 @@ export const Exports = () => {
     return (
     <div className="maderextk-page">
         <Headerabout />
-      <section className="hero-section">
+      <section className="hero-section-exports">
         <div className="hero-overlay">
           <div className="hero-content">
             {/* <div className="logo-container">
@@ -42,11 +42,11 @@ export const Exports = () => {
             <div className="image-content">
               <div className="image-grid">
                 <img
-                  src="/placeholder.svg?height=200&width=250"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180228/productos1_vqda7y.png"
                   alt="Compromiso con el cliente"
                   className="grid-image"
                 />
-                <img src="/placeholder.svg?height=200&width=250" alt="Control de calidad" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/DSC_5198_ax2r3t.jpg" alt="Control de calidad" className="grid-image" />
               </div>
             </div>
           </div>
@@ -58,8 +58,8 @@ export const Exports = () => {
           <div className="section-content">
             <div className="image-content">
               <div className="image-grid">
-                <img src="/placeholder.svg?height=200&width=250" alt="Bosque sostenible" className="grid-image" />
-                <img src="/placeholder.svg?height=200&width=250" alt="Conservación ambiental" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198808/Imagen_de_WhatsApp_2022-11-09_a_las_17.23.51_cig1mb.jpg" alt="Bosque sostenible" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2022-11-09_a_las_17.34.14_lgindj.jpg" alt="Conservación ambiental" className="grid-image" />
               </div>
             </div>
             <div className="text-content">
@@ -91,8 +91,8 @@ export const Exports = () => {
             </div>
             <div className="image-content">
               <div className="image-grid">
-                <img src="/placeholder.svg?height=200&width=250" alt="Exportación global" className="grid-image" />
-                <img src="/placeholder.svg?height=200&width=250" alt="Red de distribución" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180219/productos_tnxgao.png" alt="Exportación global" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198788/D_NQ_NP_2X_959146-MCO46338667518_062021-F_ivjv4n.webp" alt="Red de distribución" className="grid-image" />
               </div>
             </div>
           </div>

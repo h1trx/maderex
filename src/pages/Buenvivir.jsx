@@ -41,7 +41,7 @@ export const Buenvivir = () => {
             </div>
             <div className="quality-image">
               <img
-                src="/placeholder.svg?height=400&width=300"
+                src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750365022/IMG_20210126_132329_bmtapx_2_fgvnkk.png"
                 alt="Casa prefabricada sostenible"
                 className="vertical-image"
               />
@@ -83,12 +83,12 @@ export const Buenvivir = () => {
             <div className="customization-images">
               <div className="image-stack">
                 <img
-                  src="/placeholder.svg?height=250&width=350"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174913/Screenshot_2025-07-24_at_22-50-11_MaderexTK_Internacionaladfasfs_gwnak7.png"
                   alt="Modelos tradicionales"
                   className="stack-image main"
                 />
                 <img
-                  src="/placeholder.svg?height=200&width=300"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174925/productos13_iewymd.png"
                   alt="Diseños modernos"
                   className="stack-image overlay"
                 />

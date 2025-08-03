@@ -14,15 +14,31 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/placeholder.svg?height=600&width=1200")
+  background: url('https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/IMG_20211130_075138_ll7ugt_zxyoii.jpg')
     center / cover;
-  min-height: 75vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.631);
+  z-index: 0;
+}
+
+.hero-section > .hero-overlay {
+  position: relative;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -63,6 +79,9 @@
   font-weight: 300;
   margin-bottom: 15px;
   letter-spacing: 1px;
+  color: white;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-subtitle {
@@ -71,6 +90,8 @@
   margin-bottom: 20px;
   color: #f8f9fa;
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-underline {

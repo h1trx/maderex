@@ -25,28 +25,6 @@ export const Aserrio = () => {
         </div>
       </section>
 
-      {/* Banner Images Section */}
-      {/* <section className="banner-section">
-        <div className="container">
-          <div className="banner-images">
-            <div className="banner-image-container">
-              <img
-                src="/placeholder.svg?height=300&width=600"
-                alt="Instalaciones de aserrío modernas"
-                className="banner-image"
-              />
-            </div>
-            <div className="banner-image-container">
-              <img
-                src="/placeholder.svg?height=300&width=600"
-                alt="Productos de madera de alta calidad"
-                className="banner-image"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Process Section */}
       <section className="process-section">
         <div className="container">
@@ -113,9 +91,9 @@ export const Aserrio = () => {
             </div>
             <div className="image-content">
               <div className="image-grid">
-                <img src="/placeholder.svg?height=200&width=250" alt="Maquinaria de aserrío" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198795/Imagen_de_WhatsApp_2022-09-21_a_las_17.27.09_cnm1we.jpg" alt="Maquinaria de aserrío" className="grid-image" />
                 <img
-                  src="/placeholder.svg?height=200&width=250"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754181004/productos9_gbnucr.png"
                   alt="Proceso de corte de precisión"
                   className="grid-image"
                 />
@@ -131,9 +109,9 @@ export const Aserrio = () => {
           <div className="section-content">
             <div className="image-content">
               <div className="image-grid">
-                <img src="/placeholder.svg?height=200&width=250" alt="Pisos y decks de madera" className="grid-image" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180219/productos_tnxgao.png" alt="Pisos y decks de madera" className="grid-image" />
                 <img
-                  src="/placeholder.svg?height=200&width=250"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347867/20180217_135112_onyr6f.jpg"
                   alt="Machimbre para interiores"
                   className="grid-image"
                 />
@@ -172,12 +150,12 @@ export const Aserrio = () => {
             <div className="image-content">
               <div className="image-grid">
                 <img
-                  src="/placeholder.svg?height=200&width=250"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198853/IMG_20210323_120249_jjas1a.jpg"
                   alt="Piezas de madera personalizadas"
                   className="grid-image"
                 />
                 <img
-                  src="/placeholder.svg?height=200&width=250"
+                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198810/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.21_l0dgmv.jpg"
                   alt="Componentes especializados"
                   className="grid-image"
                 />

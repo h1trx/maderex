@@ -11,7 +11,7 @@
 }
 
 .buenvivir-hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/placeholder.svg?height=700&width=1200")
+  background: url('https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174932/productos12_jia0l5.png')
     center / cover;
   min-height: 90vh;
   display: flex;
@@ -20,6 +20,22 @@
   text-align: center;
   color: white;
   position: relative;
+}
+
+.buenvivir-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.631);
+  z-index: 0;
+}
+
+.buenvivir-hero-section > .hero-overlay {
+  position: relative;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -39,6 +55,8 @@
   margin-bottom: 15px;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
 }
 
 .buenvivir-hero-subtitle {
@@ -47,6 +65,8 @@
   margin-bottom: 20px;
   color: #ff8c00;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-underline {

@@ -6,10 +6,9 @@
 }
 
 /* Hero Section */
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/placeholder.svg?height=600&width=1200")
-  center / cover;
-  min-height: 70vh;
+.hero-section-exports {
+  background: url('https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198811/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.23_be7zz7.jpg') center / cover no-repeat;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +16,22 @@
   color: white;
   position: relative;
   padding: 100px 0px;
+}
+
+.hero-section-exports::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.hero-section-exports > .hero-overlay {
+  position: relative;
+  z-index: 0;
 }
 
 .hero-overlay {

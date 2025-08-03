@@ -95,7 +95,7 @@ export const Main = () => {
       type: 'service',
       title: 'Store',
       desc: 'Compra productos de madera de alta calidad en nuestra tienda.',
-      bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198851/IMG_20210513_120545_h7ev5l.jpg',
       button: {
         text: 'Ir a la tienda',
         onClick: () => navig('/tienda')
@@ -104,8 +104,8 @@ export const Main = () => {
     {
       type: 'service',
       title: 'Maderex Exports',
-      desc: 'En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.',
-      bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+      desc: 'Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.',
+      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198811/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.23_be7zz7.jpg',
       button: {
         text: 'Mas información',
         onClick: () => navigate('/exports')
@@ -114,8 +114,8 @@ export const Main = () => {
     {
       type: 'service',
       title: 'Aserrío',
-      desc: 'n MaderexTK International, nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños',
-      bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+      desc: 'Nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños',
+      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/IMG_20211130_075138_ll7ugt_zxyoii.jpg',
       button: {
         text: 'Solicita servicio de aserrío',
         onClick: () => navigate('/acerrio')
@@ -125,7 +125,7 @@ export const Main = () => {
       type: 'service',
       title: 'Buenvivir',
       desc: 'En MaderexTK International, estamos encantados de presentarte nuestra línea de trabajo especializada en casas prefabricadas de madera teca: Maderex Buenvivir. Para aquellos que buscan una vivienda de alta calidad, sostenible y personalizada.',
-      bg: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174932/productos12_jia0l5.png',
       button: {
         text: 'Ver más información',
         onClick: () => navigate('/buenvivir')

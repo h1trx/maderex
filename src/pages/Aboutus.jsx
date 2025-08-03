@@ -110,7 +110,7 @@ const Aboutus = () => {
                 </p>
               </div>
               <div className="mission-image">
-                <img src="https://maderextk.com/main/images/products/productos2.png" alt="Productos Maderex" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176612/productos2_mpntt2.png" alt="Productos Maderex" />
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ const Aboutus = () => {
                 </p>
               </div>
               <div className="vision-image">
-                <img src="https://maderextk.com/main/images/products/productos10.png" alt="Visión Maderex" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176858/productos10_okpcju.png" alt="Visión Maderex" />
               </div>
             </div>
           </div>
@@ -141,10 +141,10 @@ const Aboutus = () => {
             <h2>Nuestros Aliados</h2>
             <div className="partners-grid">
               <div className="partner-logo">
-                <img src="https://maderextk.com/main/images/clients/partners_270_120_1.png" alt="Socio 1" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176946/partners_270_120_1_cjp9um.png" alt="Socio 1" />
               </div>
               <div className="partner-logo">
-                <img src="https://maderextk.com/main/images/clients/partners_270_120_2.png" alt="Socio 2" />
+                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754177017/partners_270_120_2_jnv6ag.png" alt="Socio 2" />
               </div>
             </div>
           </div>
