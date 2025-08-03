@@ -13,12 +13,13 @@ export const sendMail = (name, asunto, mail, msg, setName, setAsunto, setMail, s
             message: msg,
             email: mail,
         }, apiKey)
-
-        setName('');
-        setAsunto('');
-        setMail('');
-        setMsg('');
-
+        response.then(() => {
+            console.log("Email enviado correctamente.");
+            setName('');
+            setAsunto('');
+            setMail('');
+            setMsg('');
+        });
         return response;
     } catch (error) {
         console.error("Error enviando el email:", error);
