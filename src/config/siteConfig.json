@@ -1,0 +1,405 @@
+{
+  "siteInfo": {
+    "name": "MaderexTK International",
+    "nameShort": "MaderexTK",
+    "slogan": "INTERNACIONAL",
+    "description": "Somos una empresa dedicada a la exportación y transformación de madera teca y roble. Nuestros productos provienen de bosques reforestados, garantizando la sostenibilidad con el medio ambiente",
+    "year": "2025",
+    "experience": {
+      "years": 29,
+      "sustainability": 100
+    }
+  },
+  "logos": {
+    "main": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1749575085/image_onikyk.png",
+    "withText": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1751398299/maderexwithfont_csh0um.png"
+  },
+  "contact": {
+    "phone": {
+      "main": "573127093619",
+      "secondary": "573104018597",
+      "local": "(604)7890236"
+    },
+    "email": "info@maderextk.com",
+    "whatsapp": {
+      "exportQuote": "https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n",
+      "sawmillQuote": "https://api.whatsapp.com/send?phone=573104018597&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n"
+    }
+  },
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/profile.php?id=61552174737475",
+    "instagram": "https://www.instagram.com/maderextkoficial",
+    "tiktok": "https://www.tiktok.com/@maderextkinternat",
+    "twitter": "https://x.com/MaderexI57271"
+  },
+  "navigation": {
+    "main": [
+      {
+        "id": "home",
+        "label": "Home",
+        "type": "scroll",
+        "target": "home"
+      },
+      {
+        "id": "about",
+        "label": "Conocenos",
+        "type": "scroll",
+        "target": "about-section"
+      },
+      {
+        "id": "projects",
+        "label": "Proyectos",
+        "type": "scroll",
+        "target": "projects-section"
+      },
+      {
+        "id": "contact",
+        "label": "Contactanos",
+        "type": "scroll",
+        "target": "contact-section"
+      }
+    ],
+    "footer": [
+      {
+        "label": "Home",
+        "type": "scroll",
+        "target": "home"
+      },
+      {
+        "label": "About",
+        "type": "route",
+        "target": "/about"
+      },
+      {
+        "label": "Resources",
+        "type": "external",
+        "target": "#"
+      },
+      {
+        "label": "Help",
+        "type": "external",
+        "target": "#"
+      }
+    ]
+  },
+  "hero": {
+    "video": "https://res.cloudinary.com/dxr7cjjpa/video/upload/v1751939629/06_1_oadnlg.mp4",
+    "title": "MADEREX TK",
+    "subtitle": "INTERNACIONAL",
+    "description": "Somos una empresa dedicada a la exportación y transformación de madera teca y roble. Nuestros productos provienen de bosques reforestados, garantizando la sostenibilidad con el medio ambiente"
+  },
+  "services": [
+    {
+      "id": "store",
+      "title": "Store",
+      "description": "Compra productos de madera de alta calidad en nuestra tienda.",
+      "background": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198851/IMG_20210513_120545_h7ev5l.jpg",
+      "icon": "GiHandTruck",
+      "route": "https://store.maderextk.com",
+      "type": "external",
+      "button": {
+        "text": "Ir a la tienda"
+      }
+    },
+    {
+      "id": "exports",
+      "title": "Maderex Exports",
+      "description": "Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.",
+      "background": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198811/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.23_be7zz7.jpg",
+      "icon": "PiShippingContainerLight",
+      "route": "/exports",
+      "type": "route",
+      "button": {
+        "text": "Mas información"
+      }
+    },
+    {
+      "id": "sawmill",
+      "title": "Aserrío",
+      "description": "Nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños",
+      "background": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/IMG_20211130_075138_ll7ugt_zxyoii.jpg",
+      "icon": "GiWoodBeam",
+      "route": "/acerrio",
+      "type": "route",
+      "button": {
+        "text": "Solicita servicio de aserrío"
+      }
+    },
+    {
+      "id": "buenvivir",
+      "title": "Buenvivir",
+      "description": "En MaderexTK International, estamos encantados de presentarte nuestra línea de trabajo especializada en casas prefabricadas de madera teca: Maderex Buenvivir. Para aquellos que buscan una vivienda de alta calidad, sostenible y personalizada.",
+      "background": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174932/productos12_jia0l5.png",
+      "icon": "GiWoodCabin",
+      "route": "/buenvivir",
+      "type": "route",
+      "button": {
+        "text": "Ver más información"
+      }
+    }
+  ],
+  "about": {
+    "home": {
+      "text": "Más de 25 años cultivando Madera\nTECA de forma sostenible.",
+      "button": "Conocenos"
+    },
+    "page": {
+      "whoWeAre": {
+        "title": "¿Quienes Somos?",
+        "description": "Somos una empresa dedicada al cultivo, extracción, transformación y comercialización de madera TECA. Contamos con nuestro propio aserrío y carpintería para aprovechar la madera al 100%, garantizando productos de la más alta calidad."
+      },
+      "mission": {
+        "title": "Nuestra Misión",
+        "description": "Elaborar productos foresto-industriales de calidad que brinden valor a nuestros clientes, accionistas y comunidad, enfatizando siempre nuestra responsabilidad social y ambiental en cada proceso de producción.",
+        "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176612/productos2_mpntt2.png"
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "description": "Para el año 2025 queremos ser un referente internacional, liderando el sector agroindustrial con la mejor madera del país, manteniendo siempre nuestro espíritu innovador y compromiso con la excelencia.",
+        "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176858/productos10_okpcju.png"
+      },
+      "partners": {
+        "title": "Nuestros Aliados",
+        "logos": [
+          "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176946/partners_270_120_1_cjp9um.png",
+          "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754177017/partners_270_120_2_jnv6ag.png"
+        ]
+      }
+    }
+  },
+  "projects": [
+    {
+      "name": "GHL - Desktop",
+      "description": "Proyecto de escritorio empresarial con madera teca de alta calidad, diseñado para espacios corporativos modernos.",
+      "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2023-07-14_a_las_16.47.25_3a0694e4_uhf7yo.jpg"
+    },
+    {
+      "name": "Prodigio",
+      "description": "Desarrollo inmobiliario de alta gama con acabados en madera teca, combinando elegancia y sostenibilidad.",
+      "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2023-07-14_a_las_16.47.25_3a0694e4_uhf7yo.jpg"
+    },
+    {
+      "name": "Biblioteca",
+      "description": "Proyecto de biblioteca municipal con mobiliario y estructuras en madera teca, creando un ambiente cálido y acogedor.",
+      "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2023-07-14_a_las_16.47.25_3a0694e4_uhf7yo.jpg"
+    }
+  ],
+  "pages": {
+    "exports": {
+      "hero": {
+        "title": "Su Socio En Madera de Excelencia",
+        "description": "En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado."
+      },
+      "sections": [
+        {
+          "title": "Compromiso con el Cliente",
+          "description": "En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180228/productos1_vqda7y.png",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/DSC_5198_ax2r3t.jpg"
+          ],
+          "layout": "text-left"
+        },
+        {
+          "title": "Sostenibilidad y Responsabilidad Ambiental",
+          "description": "Nos preocupamos por el futuro de nuestros bosques, por lo que nos aseguramos de que todas nuestras maderas provengan de fuentes sostenibles y gestionadas de manera responsable. Con un enfoque en la conservación del medio ambiente, nos esforzamos por promover prácticas forestales sostenibles que protejan nuestros recursos naturales para las generaciones venideras.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198808/Imagen_de_WhatsApp_2022-11-09_a_las_17.23.51_cig1mb.jpg",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2022-11-09_a_las_17.34.14_lgindj.jpg"
+          ],
+          "layout": "text-right"
+        },
+        {
+          "title": "Exportación Global",
+          "description": "Con una sólida red de distribución internacional, atendemos a clientes en todo el mundo, garantizando entregas rápidas y seguras en cualquier ubicación. Ya sea que necesite un pequeño pedido para un proyecto personal o un envío a gran escala para un proyecto comercial, puede confiar en nosotros para cumplir con sus requisitos con profesionalismo y eficiencia.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180219/productos_tnxgao.png",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198788/D_NQ_NP_2X_959146-MCO46338667518_062021-F_ivjv4n.webp"
+          ],
+          "layout": "text-left"
+        }
+      ],
+      "finalMessage": {
+        "title": "Nuestro Compromiso",
+        "content": "Gracias por elegir Maderextk como su socio en madera. Esperamos con interés servirle y ayudarlo a alcanzar el éxito en todos sus proyectos."
+      }
+    },
+    "sawmill": {
+      "hero": {
+        "title": "Servicio de Aserrío",
+        "subtitle": "Su Socio en Aserrío y Madera Dimensionada",
+        "description": "En MaderexTK International, nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños. Desde la elaboración de machimbre y pisos hasta la creación de decks y piezas a medida, nuestro compromiso es proporcionar productos de la más alta calidad y un servicio excepcional que cumpla con las expectativas de nuestros clientes."
+      },
+      "process": {
+        "title": "Nuestro Proceso",
+        "steps": [
+          {
+            "icon": "🚛",
+            "title": "Recepción y Clasificación"
+          },
+          {
+            "icon": "🪚",
+            "title": "Corte y Dimensionado"
+          },
+          {
+            "icon": "🌡️",
+            "title": "Secado en Horno"
+          },
+          {
+            "icon": "🔍",
+            "title": "Control de Calidad"
+          }
+        ]
+      },
+      "services": {
+        "title": "Nuestros Servicios",
+        "items": [
+          {
+            "title": "Cortes a Medida",
+            "description": "Adaptamos las dimensiones de la madera a las especificaciones exactas de tu proyecto."
+          },
+          {
+            "title": "Madera Estructural",
+            "description": "Vigas, columnas y tablas de alta resistencia para construcción."
+          },
+          {
+            "title": "Tratamientos y Acabados",
+            "description": "Servicios de secado, cepillado y tratamiento para garantizar la durabilidad."
+          }
+        ]
+      },
+      "sections": [
+        {
+          "title": "Servicio de Aserrío de Calidad",
+          "description": "Nuestro servicio de aserrío es la columna vertebral de nuestra operación, donde transformamos troncos de madera en una variedad de productos dimensionados según las especificaciones precisas de nuestros clientes. Con tecnología de vanguardia y un equipo de expertos en aserrío, garantizamos cortes precisos y acabados impecables que cumplen con los estándares más exigentes de la industria.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198795/Imagen_de_WhatsApp_2022-09-21_a_las_17.27.09_cnm1we.jpg",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754181004/productos9_gbnucr.png"
+          ],
+          "layout": "text-left"
+        },
+        {
+          "title": "Madera Dimensionada para Proyectos Inmobiliarios",
+          "description": "Entendemos las necesidades únicas de la industria inmobiliaria y nos enorgullece ofrecer una amplia selección de productos de madera dimensionada para satisfacer los requisitos específicos de cada proyecto. Desde machimbre para revestimientos interiores hasta pisos de madera para áreas comunes y decks para espacios al aire libre, nuestros productos son conocidos por su calidad excepcional y su capacidad para realzar cualquier ambiente.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180219/productos_tnxgao.png",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347867/20180217_135112_onyr6f.jpg"
+          ],
+          "layout": "text-right"
+        },
+        {
+          "title": "Piezas a Medida para Proyectos Especiales",
+          "description": "En MaderexTK International, entendemos que cada proyecto tiene sus propias necesidades y desafíos únicos. Es por eso que ofrecemos un servicio de fabricación a medida, donde podemos crear piezas de madera personalizadas según las especificaciones exactas de nuestros clientes. Ya sea que necesite piezas especiales para una estructura arquitectónica única o componentes específicos para un diseño interior personalizado, nuestro equipo está aquí para hacer realidad su visión.",
+          "images": [
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198853/IMG_20210323_120249_jjas1a.jpg",
+            "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198810/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.21_l0dgmv.jpg"
+          ],
+          "layout": "text-left"
+        }
+      ]
+    },
+    "buenvivir": {
+      "hero": {
+        "title": "Maderex Buenvivir",
+        "subtitle": "Tu Mejor Opción en Casas Prefabricadas",
+        "description": "En MaderexTK International, estamos encantados de presentarte nuestra línea de trabajo especializada en casas prefabricadas de madera teca: Maderex Buenvivir. Para aquellos que buscan una vivienda de alta calidad, sostenible y personalizada, nuestras casas prefabricadas son la elección perfecta, ofreciendo eficiencia y rapidez en el proceso de construcción sin comprometer la excelencia en el diseño y los acabados."
+      },
+      "quality": {
+        "title": "Calidad y Sostenibilidad en Cada Hogar",
+        "description": [
+          "En Maderex Buenvivir, nos comprometemos a ofrecer casas prefabricadas que no solo sean hermosas y funcionales, sino también respetuosas con el medio ambiente.",
+          "La madera teca, conocida por su durabilidad y resistencia natural, es el material ideal para crear hogares que perduren por generaciones, mientras que su origen sostenible garantiza un impacto mínimo en los recursos naturales."
+        ],
+        "image": "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750365022/IMG_20210126_132329_bmtapx_2_fgvnkk.png"
+      },
+      "features": {
+        "title": "Características Principales",
+        "items": [
+          {
+            "icon": "🏡",
+            "title": "Diseños Modernos",
+            "description": "Arquitectura contemporánea que se adapta a tu estilo de vida"
+          },
+          {
+            "icon": "🌱",
+            "title": "100% Sostenible",
+            "description": "Madera teca de fuentes responsables y procesos eco-amigables"
+          },
+          {
+            "icon": "⚡",
+            "title": "Construcción Rápida",
+            "description": "Proceso eficiente que reduce tiempos sin comprometer calidad"
+          },
+          {
+            "icon": "🎨",
+            "title": "Personalizable",
+            "description": "Adapta cada detalle según tus necesidades y preferencias"
+          }
+        ]
+      },
+      "customization": {
+        "title": "Personalización y Variedad de Modelos",
+        "description": [
+          "Entendemos que cada persona tiene su propio estilo y necesidades únicas, por lo que ofrecemos una amplia variedad de modelos de casas prefabricadas que pueden ser personalizados según tus preferencias.",
+          "Desde diseños modernos hasta opciones más tradicionales, cada modelo puede ser adaptado con diferentes opciones de acabado y equipamiento para crear la casa de tus sueños."
+        ],
+        "images": [
+          "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174913/Screenshot_2025-07-24_at_22-50-11_MaderexTK_Internacionaladfasfs_gwnak7.png",
+          "https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174925/productos13_iewymd.png"
+        ],
+        "highlights": [
+          "Diseños modernos y tradicionales",
+          "Acabados personalizables",
+          "Equipamiento a medida"
+        ]
+      },
+      "commitment": {
+        "title": "Nuestro Compromiso Contigo",
+        "description": "Gracias por elegir Maderextk como su socio en madera. Esperamos con interés servirle y ayudarlo a alcanzar el éxito en todos sus proyectos."
+      }
+    }
+  },
+  "contactForm": {
+    "title": "FORMULARIO DE\nCONTACTO",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Nombres",
+        "type": "text",
+        "placeholder": "Juan Camilo",
+        "required": true
+      },
+      {
+        "name": "asunto",
+        "label": "Asunto",
+        "type": "text",
+        "placeholder": "Contacto para proyecto",
+        "required": true
+      },
+      {
+        "name": "mail",
+        "label": "Email",
+        "type": "email",
+        "placeholder": "anyone@example.com",
+        "required": true
+      },
+      {
+        "name": "msg",
+        "label": "Mensaje",
+        "type": "textarea",
+        "placeholder": "Tu mensaje aquí...",
+        "required": true
+      }
+    ],
+    "submitText": "Enviar",
+    "successMessage": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+    "backgroundVideo": "https://res.cloudinary.com/dxr7cjjpa/video/upload/v1752937174/0719_1_tzsx2z.mp4"
+  },
+  "map": {
+    "title": "Nuestra Ubicación",
+    "coordinates": {
+      "lat": 6.2442,
+      "lng": -75.5812
+    }
+  }
+}
