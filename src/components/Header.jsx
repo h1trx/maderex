@@ -10,7 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../styles/header.css"
 
 import { Asidemovil } from "./Asidemovil";
-import { useNavigation, useContact } from "../hooks/useSiteConfig";
+import { useNavigation, useContact } from "../context/SiteConfigContext";
 
 export const Header = () => {
   const [aside, setAside] = useState(false);
@@ -42,10 +42,10 @@ export const Header = () => {
         </ul>
       </nav>
       <ul className="social-links">
-        <li><a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook className="icon social-icon" /></a></li>
-        <li><a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram className="icon social-icon" /></a></li>
-        <li><a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Tiktok"><FaTiktok className="icon social-icon" /></a></li>
-        <li><a href={whatsapp.exportQuote} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp className="icon social-icon" /></a></li>
+        <li><a href={socialMedia?.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook className="icon social-icon" /></a></li>
+        <li><a href={socialMedia?.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram className="icon social-icon" /></a></li>
+        <li><a href={socialMedia?.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Tiktok"><FaTiktok className="icon social-icon" /></a></li>
+        <li><a href={whatsapp?.exportQuote} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp className="icon social-icon" /></a></li>
       </ul>
       <Asidemovil isVisible={aside} setIsVisible={setAside} />
     </header>

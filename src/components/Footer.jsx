@@ -7,7 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 import { navig } from "../utils/navig";
-import { useSiteConfig, useNavigation, useContact } from "../hooks/useSiteConfig";
+import { useSiteConfig, useContact, useNavigation } from '../context/SiteConfigContext';
 
 import "../styles/footer.css"
 

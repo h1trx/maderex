@@ -1,6 +1,6 @@
 import "../styles/projects.css"
 import { Project } from "./Project";
-import { useProjects } from "../hooks/useSiteConfig";
+import { useProjects } from '../context/SiteConfigContext';
 
 export const Projects = () => {
     const { projects } = useProjects();

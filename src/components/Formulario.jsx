@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { sendMail } from "../utils/sendMail"
-import { useSiteConfig } from "../hooks/useSiteConfig"
+import { useSiteConfig } from "../context/SiteConfigContext"
 import "../styles/formulario.css"
 
 export const Formulario = () => {

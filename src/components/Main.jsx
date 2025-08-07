@@ -7,7 +7,7 @@ import { Acedro } from "./Acedro";
 import DynamicIcon from "./common/DynamicIcon";
 
 import { navig } from "../utils/navig";
-import { useSiteConfig, useServices } from "../hooks/useSiteConfig";
+import { useSiteConfig, useServices } from "../context/SiteConfigContext";
 
 import "../styles/landingpage.css"
 import "../styles/carousel.css"
@@ -23,7 +23,22 @@ export const Main = () => {
   const navigate = useNavigate();
   
   // Obtener configuración del JSON
-  const { hero, logos, services } = useSiteConfig();
+  const { hero, logos, services, loading } = useSiteConfig();
+  
+  // No renderizar hasta que los datos estén cargados
+  if (loading || !hero || !logos || !services) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        fontSize: '1.2rem'
+      }}>
+        Cargando...
+      </div>
+    );
+  }
 
   // Handlers para swipe/touch/drag
   const handleTouchStart = (e) => {

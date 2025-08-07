@@ -1,7 +1,7 @@
 import '../styles/buenvivir.css';
 import { Headerabout } from '../components/about/Headerabout';
 import { Footer } from '../components/Footer';
-import { useSiteConfig } from '../hooks/useSiteConfig';
+import { useSiteConfig } from '../context/SiteConfigContext';
 
 export const Buenvivir = () => {
   const { pages } = useSiteConfig();

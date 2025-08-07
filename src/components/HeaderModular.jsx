@@ -10,7 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../styles/header.css";
 
 import { Asidemovil } from "./Asidemovil";
-import { useSiteConfig, useNavigation, useContact } from "../hooks/useSiteConfig";
+import { useSiteConfig, useNavigation, useContact } from "../context/SiteConfigContext";
 
 export const HeaderModular = () => {
   const [aside, setAside] = useState(false);

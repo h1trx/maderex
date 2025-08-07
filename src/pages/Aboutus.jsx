@@ -2,7 +2,7 @@ import { Headerabout } from "../components/about/Headerabout"
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Footer } from "../components/Footer";
-import { useSiteConfig } from "../hooks/useSiteConfig";
+import { useSiteConfig } from "../context/SiteConfigContext";
 import "../styles/aboutUs.css"
 
 const Aboutus = () => {

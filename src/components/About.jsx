@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useSiteConfig } from "../hooks/useSiteConfig"
+import { useSiteConfig } from '../context/SiteConfigContext';
 
 import "../styles/about.css"
 

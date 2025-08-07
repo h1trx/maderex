@@ -1,6 +1,6 @@
 import { Headerabout } from "../components/about/Headerabout";
 import { Footer } from "../components/Footer";
-import { useSiteConfig, useContact } from "../hooks/useSiteConfig";
+import { useSiteConfig, useContact } from "../context/SiteConfigContext";
 import { navig } from "../utils/navig";
 
 import "../styles/aserrio.css";
