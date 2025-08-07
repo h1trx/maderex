@@ -98,7 +98,7 @@ export const Main = () => {
       bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198851/IMG_20210513_120545_h7ev5l.jpg',
       button: {
         text: 'Ir a la tienda',
-        onClick: () => navig('/tienda')
+        onClick: () => navig('https://store.maderextk.com')
       }
     },
     {
