@@ -1,115 +1,91 @@
-import {Headerabout} from '../components/about/Headerabout';
-import { Footer } from '../components/Footer'; 
+import { Headerabout } from '../components/about/Headerabout';
+import { Footer } from '../components/Footer';
+import { useSiteConfig, useContact } from '../hooks/useSiteConfig';
+import { navig } from '../utils/navig';
 import '../styles/exports.css';
 
-
 export const Exports = () => {
+    const { pages } = useSiteConfig();
+    const { whatsapp } = useContact();
+    const exportsPage = pages.exports;
+
     return (
     <div className="maderextk-page">
         <Headerabout />
       <section className="hero-section-exports">
         <div className="hero-overlay">
           <div className="hero-content">
-            {/* <div className="logo-container">
-              <div className="logo-circle">
-                <span className="logo-text">M</span>
-              </div>
-            </div> */}
-            <h1 className="hero-title">Su Socio En Madera de Excelencia</h1>
+            <h1 className="hero-title">{exportsPage.hero.title}</h1>
             <div className="hero-underline"></div>
             <p className="hero-description">
-              En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en la
-              industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las
-              maderas más apreciadas en el mercado.
+              {exportsPage.hero.description}
             </p>
-          <button className="btn-action" onClick={() => navig(`https://api.whatsapp.com/send?phone=573104018597&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)}>Cotiza tu exportación</button>
+          <button className="btn-action" onClick={() => navig(whatsapp.sawmillQuote)}>Cotiza tu exportación</button>
           </div>
         </div>
       </section>
 
-      <section className="content-section">
-        <div className="container">
-          <div className="section-content">
-            <div className="text-content">
-              <h2 className="section-title">Compromiso con el Cliente</h2>
-              <div className="title-underline"></div>
-              <p className="section-text">
-                En Maderextk, nos enorgullece ser su proveedor confiable de madera de calidad suprema. Somos líderes en
-                la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de
-                las maderas más apreciadas en el mercado.
-              </p>
-            </div>
-            <div className="image-content">
-              <div className="image-grid">
-                <img
-                  src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180228/productos1_vqda7y.png"
-                  alt="Compromiso con el cliente"
-                  className="grid-image"
-                />
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/DSC_5198_ax2r3t.jpg" alt="Control de calidad" className="grid-image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section alt-section">
-        <div className="container">
-          <div className="section-content">
-            <div className="image-content">
-              <div className="image-grid">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198808/Imagen_de_WhatsApp_2022-11-09_a_las_17.23.51_cig1mb.jpg" alt="Bosque sostenible" className="grid-image" />
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198816/Imagen_de_WhatsApp_2022-11-09_a_las_17.34.14_lgindj.jpg" alt="Conservación ambiental" className="grid-image" />
-              </div>
-            </div>
-            <div className="text-content">
-              <h2 className="section-title">Sostenibilidad y Responsabilidad Ambiental</h2>
-              <div className="title-underline"></div>
-              <p className="section-text">
-                Nos preocupamos por el futuro de nuestros bosques, por lo que nos aseguramos de que todas nuestras
-                maderas provengan de fuentes sostenibles y gestionadas de manera responsable. Con un enfoque en la
-                conservación del medio ambiente, nos esforzamos por promover prácticas forestales sostenibles que
-                protejan nuestros recursos naturales para las generaciones venideras.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section">
-        <div className="container">
-          <div className="section-content">
-            <div className="text-content">
-              <h2 className="section-title">Exportación Global</h2>
-              <div className="title-underline"></div>
-              <p className="section-text">
-                Con una sólida red de distribución internacional, atendemos a clientes en todo el mundo, garantizando
-                entregas rápidas y seguras en cualquier ubicación. Ya sea que necesite un pequeño pedido para un
-                proyecto personal o un envío a gran escala para un proyecto comercial, puede confiar en nosotros para
-                cumplir con sus requisitos con profesionalismo y eficiencia.
-              </p>
-            </div>
-            <div className="image-content">
-              <div className="image-grid">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754180219/productos_tnxgao.png" alt="Exportación global" className="grid-image" />
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198788/D_NQ_NP_2X_959146-MCO46338667518_062021-F_ivjv4n.webp" alt="Red de distribución" className="grid-image" />
-              </div>
+      {exportsPage.sections.map((section, index) => (
+        <section 
+          key={index} 
+          className={`content-section ${section.layout === 'text-right' ? 'alt-section' : ''}`}
+        >
+          <div className="container">
+            <div className="section-content">
+              {section.layout === 'text-right' ? (
+                <>
+                  <div className="image-content">
+                    <div className="image-grid">
+                      {section.images.map((image, imgIndex) => (
+                        <img 
+                          key={imgIndex}
+                          src={image} 
+                          alt={`${section.title} - Imagen ${imgIndex + 1}`} 
+                          className="grid-image" 
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="text-content">
+                    <h2 className="section-title">{section.title}</h2>
+                    <div className="title-underline"></div>
+                    <p className="section-text">{section.description}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="text-content">
+                    <h2 className="section-title">{section.title}</h2>
+                    <div className="title-underline"></div>
+                    <p className="section-text">{section.description}</p>
+                  </div>
+                  <div className="image-content">
+                    <div className="image-grid">
+                      {section.images.map((image, imgIndex) => (
+                        <img 
+                          key={imgIndex}
+                          src={image} 
+                          alt={`${section.title} - Imagen ${imgIndex + 1}`} 
+                          className="grid-image" 
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       <section className="final-message-section">
         <div className="container">
           <div className="final-content">
             <div className="message-card">
-              <h3 className="message-title">Nuestro Compromiso</h3>
+              <h3 className="message-title">{exportsPage.finalMessage.title}</h3>
               <div className="title-underline center"></div>
               <ul className="message-list">
-                <li>
-                  Gracias por elegir Maderextk como su socio en madera. Esperamos con interés servirle y ayudarlo a
-                  alcanzar el éxito en todos sus proyectos.
-                </li>
+                <li>{exportsPage.finalMessage.content}</li>
               </ul>
               <div className="wood-texture-accent"></div>
             </div>

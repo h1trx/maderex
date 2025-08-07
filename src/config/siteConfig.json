@@ -296,7 +296,15 @@
           ],
           "layout": "text-left"
         }
-      ]
+      ],
+      "finalMessage": {
+        "title": "Nuestro Compromiso",
+        "content": "Gracias por elegir MaderexTK como su socio en madera. Esperamos con interés servirle y ayudarlo a alcanzar el éxito en todos sus proyectos."
+      },
+      "ctaButton": {
+        "text": "Solicitar Cotización",
+        "whatsappLink": "https://api.whatsapp.com/send?phone=573104018597&text=Hola%2C%20quiero%20cotizar%20servicios%20de%20aserr%C3%ADo"
+      }
     },
     "buenvivir": {
       "hero": {
