@@ -7,30 +7,36 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 import { navig } from "../utils/navig";
+import { useSiteConfig, useNavigation, useContact } from "../hooks/useSiteConfig";
 
 import "../styles/footer.css"
 
 export const Footer = () => {
+    const { footerNavigation } = useNavigation();
+    const { socialMedia, phone, email } = useContact();
+    const { logos, siteInfo } = useSiteConfig();
+    
     return (
         <footer>
-            <img loading="lazy" className="img-footer" src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1751398299/maderexwithfont_csh0um.png" alt="Logo de Maderex con el texto 'Maderex'" />
+            <img loading="lazy" className="img-footer" src={logos.withText} alt={`Logo de ${siteInfo.name}`} />
             <nav>
                 <ul className="list-link-footer">
-                    <li className="item-list-footer"><a>Home</a></li>
-                    <li className="item-list-footer"><a>About</a></li>
-                    <li className="item-list-footer"><a>Resources</a></li>
-                    <li className="item-list-footer"><a>Help</a></li>
+                    {footerNavigation.map((item, index) => (
+                        <li key={index} className="item-list-footer">
+                            <a href={item.target === "#" ? "#" : item.target}>{item.label}</a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
-            <ul className="social-links social-links-footer ">
-                <li><a href="https://www.facebook.com/profile.php?id=61552174737475" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook className="icon social-icon item-list-footer" /></a></li>
-                <li><a href="https://www.instagram.com/maderextkoficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram className="icon social-icon item-list-footer" /></a></li>
-                <li><a href="https://www.tiktok.com/@maderextkinternat" target="_blank" rel="noopener noreferrer" aria-label="Tiktok"><FaTiktok className="icon social-icon item-list-footer" /></a></li>
-                <li><a href="https://x.com/MaderexI57271" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><BsTwitterX className="icon social-icon item-list-footer" /></a></li>
-                <li><a href="tel:(604)7890236" aria-label="Llamar a Maderex"><FaPhoneAlt className="icon social-icon item-list-footer" /></a></li>
-                <li><a href="mailto:info@maderextk.com" aria-label="Enviar correo a Maderex"><IoMdMail className="icon social-icon item-list-footer" /></a></li>
+            <ul className="social-links social-links-footer">
+                <li><a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook className="icon social-icon item-list-footer" /></a></li>
+                <li><a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram className="icon social-icon item-list-footer" /></a></li>
+                <li><a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Tiktok"><FaTiktok className="icon social-icon item-list-footer" /></a></li>
+                <li><a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter"><BsTwitterX className="icon social-icon item-list-footer" /></a></li>
+                <li><a href={`tel:${phone.local}`} aria-label="Llamar a Maderex"><FaPhoneAlt className="icon social-icon item-list-footer" /></a></li>
+                <li><a href={`mailto:${email}`} aria-label="Enviar correo a Maderex"><IoMdMail className="icon social-icon item-list-footer" /></a></li>
             </ul>
-            <p className="item-list-footer">2025 Maderex TK. All Rights reserved.</p>
+            <p className="item-list-footer">{siteInfo.year} {siteInfo.nameShort}. All Rights reserved.</p>
         </footer>
     )
 }

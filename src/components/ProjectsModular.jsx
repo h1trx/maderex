@@ -1,10 +1,10 @@
-import "../styles/projects.css"
+import "../styles/projects.css";
 import { Project } from "./Project";
 import { useProjects } from "../hooks/useSiteConfig";
 
-export const Projects = () => {
+export const ProjectsModular = () => {
     const { projects } = useProjects();
-    
+
     return (
         <section className="project-main-container">
             <h2>Proyectos</h2>
@@ -20,5 +20,5 @@ export const Projects = () => {
             }
             <hr className="divisor-left" />
         </section>
-    )
-}
+    );
+};

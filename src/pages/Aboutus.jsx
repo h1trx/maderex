@@ -2,16 +2,19 @@ import { Headerabout } from "../components/about/Headerabout"
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Footer } from "../components/Footer";
+import { useSiteConfig } from "../hooks/useSiteConfig";
 import "../styles/aboutUs.css"
-
-// animacion para valores destacados
-const HIGHLIGHT_VALUES = [
-  { value: 29, suffix: "+", label: "Años de experiencia" },
-  { value: 100, suffix: "%", label: "Aprovechamiento sostenible" }
-];
 
 const Aboutus = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const { about, logos, siteInfo } = useSiteConfig();
+  
+  // Crear valores destacados desde la configuración
+  const HIGHLIGHT_VALUES = [
+    { value: siteInfo.experience.years, suffix: "+", label: "Años de experiencia" },
+    { value: siteInfo.experience.sustainability, suffix: "%", label: "Aprovechamiento sostenible" }
+  ];
+  
   // Estados para los números animados
   const [counts, setCounts] = useState(HIGHLIGHT_VALUES.map(() => 0));
 
@@ -69,18 +72,14 @@ const Aboutus = () => {
               <img
                 loading="lazy"
                 className="logopng"
-                src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1749575085/image_onikyk.png"
-                alt="Logo MaderexTK"
+                src={logos.main}
+                alt={`Logo ${siteInfo.name}`}
               />
-              <h2 style={{marginTop: 0}}>¿Quienes Somos?</h2>
+              <h2 style={{marginTop: 0}}>{about.page.whoWeAre.title}</h2>
             </div>
             <div className="content-grid">
               <div className="content-text">
-                <p>
-                  Somos una empresa dedicada al <strong>cultivo, extracción, transformación y comercialización de madera TECA</strong>.
-                  Contamos con nuestro propio aserrío y carpintería para aprovechar la madera al 100%,
-                  garantizando productos de la más alta calidad.
-                </p>
+                <p>{about.page.whoWeAre.description}</p>
                 <div className="highlights">
                   {HIGHLIGHT_VALUES.map((item, idx) => (
                     <div className="highlight-item" key={item.label}>
@@ -102,15 +101,11 @@ const Aboutus = () => {
           <div className="container">
             <div className="mission-content">
               <div className="mission-text">
-                <h2>Nuestra Misión</h2>
-                <p>
-                  Elaborar productos foresto-industriales de calidad que brinden valor a nuestros clientes,
-                  accionistas y comunidad, enfatizando siempre nuestra responsabilidad social y ambiental
-                  en cada proceso de producción.
-                </p>
+                <h2>{about.page.mission.title}</h2>
+                <p>{about.page.mission.description}</p>
               </div>
               <div className="mission-image">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176612/productos2_mpntt2.png" alt="Productos Maderex" />
+                <img src={about.page.mission.image} alt="Productos Maderex" />
               </div>
             </div>
           </div>
@@ -121,15 +116,11 @@ const Aboutus = () => {
           <div className="container">
             <div className="vision-content">
               <div className="vision-text">
-                <h2>Nuestra Visión</h2>
-                <p>
-                  Para el año 2025 queremos ser un referente internacional, liderando el sector
-                  agroindustrial con la mejor madera del país, manteniendo siempre nuestro
-                  espíritu innovador y compromiso con la excelencia.
-                </p>
+                <h2>{about.page.vision.title}</h2>
+                <p>{about.page.vision.description}</p>
               </div>
               <div className="vision-image">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176858/productos10_okpcju.png" alt="Visión Maderex" />
+                <img src={about.page.vision.image} alt="Visión Maderex" />
               </div>
             </div>
           </div>
@@ -138,14 +129,13 @@ const Aboutus = () => {
         {/* Partners Section */}
         <section className="partners-section">
           <div className="container">
-            <h2>Nuestros Aliados</h2>
+            <h2>{about.page.partners.title}</h2>
             <div className="partners-grid">
-              <div className="partner-logo">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754176946/partners_270_120_1_cjp9um.png" alt="Socio 1" />
-              </div>
-              <div className="partner-logo">
-                <img src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754177017/partners_270_120_2_jnv6ag.png" alt="Socio 2" />
-              </div>
+              {about.page.partners.logos.map((logo, index) => (
+                <div key={index} className="partner-logo">
+                  <img src={logo} alt={`Socio ${index + 1}`} />
+                </div>
+              ))}
             </div>
           </div>
         </section>

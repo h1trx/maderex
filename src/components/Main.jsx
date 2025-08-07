@@ -4,8 +4,10 @@ import { GiWoodCabin, GiWoodBeam, GiHandTruck } from "react-icons/gi";
 import { PiShippingContainerLight } from "react-icons/pi";
 import { BsChatDots } from "react-icons/bs";
 import { Acedro } from "./Acedro";
+import DynamicIcon from "./common/DynamicIcon";
 
 import { navig } from "../utils/navig";
+import { useSiteConfig, useServices } from "../hooks/useSiteConfig";
 
 import "../styles/landingpage.css"
 import "../styles/carousel.css"
@@ -18,7 +20,10 @@ export const Main = () => {
   // Swipe/drag state
   const [dragStartX, setDragStartX] = useState(null);
   const [dragging, setDragging] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  
+  // Obtener configuración del JSON
+  const { hero, logos, services } = useSiteConfig();
 
   // Handlers para swipe/touch/drag
   const handleTouchStart = (e) => {
@@ -63,6 +68,7 @@ export const Main = () => {
     setDragging(false);
     setMouseDownX(null);
   };
+  // Crear slides dinámicos desde la configuración JSON
   const slides = [
     {
       type: 'main',
@@ -74,63 +80,38 @@ export const Main = () => {
               autoPlay
               muted
               loop
-              src="https://res.cloudinary.com/dxr7cjjpa/video/upload/v1751939629/06_1_oadnlg.mp4"
+              src={hero.video}
             >Thoi source not found in your browser</video>
             <div className="opaco"></div>
           </div>
-          <img loading="lazy" className="logopng" src="https://res.cloudinary.com/dxr7cjjpa/image/upload/v1749575085/image_onikyk.png" alt="Logo MaderexTK" />
+          <img loading="lazy" className="logopng" src={logos.main} alt="Logo MaderexTK" />
           <div className="text-container">
             <div className="title-containter">
-              <h1 className="title" >MADEREX <spam>TK</spam><br /></h1>
-              <p id="internacional">INTERNACIONAL</p>
+              <h1 className="title">{hero.title.split(' ')[0]} <span>{hero.title.split(' ')[1]}</span><br /></h1>
+              <p id="internacional">{hero.subtitle}</p>
             </div>
-            <p className="desc">Somos una empresa dedicada a la exportación y transformación de madera teca y roble. Nuestros productos provienen de bosques reforestados,  garantizando la sostenibilidad con el medio ambiente</p>
+            <p className="desc">{hero.description}</p>
           </div>
-          {/* <button className="btn-action" onClick={() => navig(`https://api.whatsapp.com/send?phone=573127093619&text=Hola%2C%20quiero%20cotizar%20una%20exportaci%C3%B3n`)}>Cotiza tu exportación</button> */}
-          {/* <button className="btn-services" onClick={() => setSlide((s) => (s + 1) % slides.length)}>conoce nuestros servicios</button> */}
         </>
       )
     },
-    {
+    ...services.map(service => ({
       type: 'service',
-      title: 'Store',
-      desc: 'Compra productos de madera de alta calidad en nuestra tienda.',
-      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198851/IMG_20210513_120545_h7ev5l.jpg',
+      title: service.title,
+      desc: service.description,
+      bg: service.background,
+      icon: service.icon,
       button: {
-        text: 'Ir a la tienda',
-        onClick: () => navig('https://store.maderextk.com')
+        text: service.button.text,
+        onClick: () => {
+          if (service.type === 'external') {
+            navig(service.route);
+          } else {
+            navigate(service.route);
+          }
+        }
       }
-    },
-    {
-      type: 'service',
-      title: 'Maderex Exports',
-      desc: 'Somos líderes en la industria de la madera, especializados en la venta y exportación de productos de teca y roble, dos de las maderas más apreciadas en el mercado.',
-      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1746198811/Imagen_de_WhatsApp_2022-11-09_a_las_17.32.23_be7zz7.jpg',
-      button: {
-        text: 'Mas información',
-        onClick: () => navigate('/exports')
-      }
-    },
-    {
-      type: 'service',
-      title: 'Aserrío',
-      desc: 'Nos destacamos por ofrecer una amplia gama de servicios de aserrío y venta nacional de madera dimensionada para satisfacer las necesidades de proyectos inmobiliarios de todos los tamaños',
-      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1750347855/IMG_20211130_075138_ll7ugt_zxyoii.jpg',
-      button: {
-        text: 'Solicita servicio de aserrío',
-        onClick: () => navigate('/acerrio')
-      }
-    },
-    {
-      type: 'service',
-      title: 'Buenvivir',
-      desc: 'En MaderexTK International, estamos encantados de presentarte nuestra línea de trabajo especializada en casas prefabricadas de madera teca: Maderex Buenvivir. Para aquellos que buscan una vivienda de alta calidad, sostenible y personalizada.',
-      bg: 'https://res.cloudinary.com/dxr7cjjpa/image/upload/v1754174932/productos12_jia0l5.png',
-      button: {
-        text: 'Ver más información',
-        onClick: () => navigate('/buenvivir')
-      }
-    },
+    }))
   ];
 
   const nextSlide = () => setSlide((s) => (s + 1) % slides.length);
@@ -200,11 +181,6 @@ export const Main = () => {
           <span className="carousel-nav-sep" aria-hidden="true">|</span>
           {slides.map((slideObj, idx) => {
             if (slideObj.type !== 'service') return null;
-            let icon = null;
-            if (slideObj.title === 'Maderex Exports') icon = <PiShippingContainerLight className="carousel-nav-icon" />;
-            else if (slideObj.title === 'Store') icon = <GiHandTruck className="carousel-nav-icon" />;
-            else if (slideObj.title === 'Aserrío' || slideObj.title === 'Acerrio') icon = <GiWoodBeam className="carousel-nav-icon" />;
-            else if (slideObj.title === 'Buenvivir') icon = <GiWoodCabin className="carousel-nav-icon" />;
             return (
               <>
                 <button
@@ -214,7 +190,9 @@ export const Main = () => {
                   aria-label={`Ir a ${slideObj.title}`}
                 >
                   <span className="carousel-nav-btn-text">{slideObj.title}</span>
-                  <span className="carousel-nav-btn-icon">{icon}</span>
+                  <span className="carousel-nav-btn-icon">
+                    <DynamicIcon iconName={slideObj.icon} className="carousel-nav-icon" />
+                  </span>
                 </button>
                 {idx < slides.length - 1 && slides[idx + 1]?.type === 'service' ? (
                   <span className="carousel-nav-sep" aria-hidden="true">|</span>
