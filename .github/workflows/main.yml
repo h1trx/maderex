@@ -1,0 +1,37 @@
+name: Build React App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build React Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Compilar proyecto
+        run: npm run build
+
+      - name: Subir artefacto de build (opcional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: |
+            build
+            dist
